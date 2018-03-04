@@ -1,0 +1,8 @@
+{
+  "require": {
+    "7k7k/php-common": "dev-master"
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+}
