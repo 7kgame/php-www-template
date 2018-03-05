@@ -1,11 +1,16 @@
 <?php
 
 use \QKPHP\Common\Config\Config;
+use \QKPHP\Web\MVC\Controller;
 
 /**
  * @RequestMapping('/user')
  */
-class User extends \QKPHP\Common\Web\MVC\Controller {
+class User extends Controller {
+
+  public function __construct() {
+    $this->registerObject('weixinService', '\Weixin\Weixin');
+  }
 
   /**
    *  @RequestMapping('{id}')
@@ -13,7 +18,7 @@ class User extends \QKPHP\Common\Web\MVC\Controller {
    */
   public function get($request, $uid) {
     echo "User.get($uid): \n";
-    \WeiXin\WeiXin::hello();
+    $this->weixinService::hello();
     var_dump($request);
   }
 
@@ -23,11 +28,11 @@ class User extends \QKPHP\Common\Web\MVC\Controller {
    */
   public function getName($request, $uid) {
     echo "User.getName($uid): \n";
-    \WeiXin\WeiXin::hello();
+    $this->weixinService::hello();
     var_dump($request);
 
     echo "\n";
-    var_dump(Config::getConf('weixin', 'appid'));
+    var_dump(Config::getConf('weixin'));
   }
 
   /**

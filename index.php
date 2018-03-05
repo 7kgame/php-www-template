@@ -1,5 +1,5 @@
 <?php
-use QKPHP\Common\Web\Application;
+use QKPHP\Web\Application;
 
 define("SITE_BASE", __DIR__);
 include SITE_BASE . DIRECTORY_SEPARATOR. "bootstrap.php";

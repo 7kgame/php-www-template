@@ -1,6 +1,8 @@
 {
   "require": {
-    "7k7k/php-common": "dev-master"
+    "7k7k/php-common": "dev-master",
+    "7k7k/php-web": "dev-master",
+    "7k7k/php-weixin": "dev-master"
   },
   "config": {
     "optimize-autoloader": true
