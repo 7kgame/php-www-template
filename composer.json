@@ -6,5 +6,8 @@
   },
   "config": {
     "optimize-autoloader": true
+  },
+  "scripts": {
+    "post-autoload-dump": ["QKPHP\\Web\\Application::updateRouter"]
   }
 }
