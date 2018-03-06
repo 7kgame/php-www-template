@@ -1,13 +1,12 @@
 <?php
 
 use \QKPHP\Common\Config\Config;
-use \QKPHP\Web\MVC\Controller;
 
 /**
  * @RequestMapping('/user')
  * @SubRequestMapping('/default')
  */
-class User extends Controller {
+class User extends Base {
 
   public function __construct() {
     $this->registerObject('weixinService', '\Weixin\Weixin');
@@ -30,7 +29,7 @@ class User extends Controller {
   public function getName($uid) {
     echo "User.getName($uid): \n";
     $this->weixinService::hello();
-    var_dump($this->request);
+    var_dump($this->router);
 
     echo "\n";
     var_dump(Config::getConf('weixin'));

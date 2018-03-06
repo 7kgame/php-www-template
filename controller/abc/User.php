@@ -1,20 +1,24 @@
 <?php
 
 use \QKPHP\Common\Config\Config;
-use \QKPHP\Web\MVC\Controller;
 
 /**
  * @RequestMapping('/user1')
  */
-class User extends Controller {
+class User extends Base {
 
   /**
    *  @RequestMapping('{id}')
    *  @method('GET')
    */
   public function get1($uid) {
-    echo "User1.get($uid): \n";
-    $this->weixinService::hello();
+    $this->templateValue('uid', $uid);
+    $user = array(
+      'name' => '张三'
+    );
+    $this->templateValues($user);
+    $this->template('detail.tpl');
+    $this->show();
   }
 
 }
