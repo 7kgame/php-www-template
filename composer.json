@@ -8,6 +8,7 @@
     "optimize-autoloader": true
   },
   "scripts": {
-    "post-autoload-dump": ["QKPHP\\Web\\Application::updateRouter"]
+    "post-autoload-dump": ["QKPHP\\Web\\Script\\Router::gen"],
+    "router": ["QKPHP\\Web\\Script\\Router::gen"]
   }
 }
