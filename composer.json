@@ -10,5 +10,11 @@
   "scripts": {
     "post-autoload-dump": ["QKPHP\\Web\\Script\\Router::gen"],
     "router": ["QKPHP\\Web\\Script\\Router::gen"]
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
   }
 }

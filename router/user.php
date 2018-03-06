@@ -2,6 +2,12 @@
 return array (
   'class' => 
   array (
+    'abc/User' => 
+    array (
+      'file' => 'abc/User.php',
+      'class' => 'User',
+      'annos' => NULL,
+    ),
     'User' => 
     array (
       'file' => 'User.php',
@@ -11,14 +17,21 @@ return array (
   ),
   'GET' => 
   array (
-    'default/{id}' => 
+    'sub/{id}' => 
+    array (
+      'class' => 'abc/User',
+      'method' => 'get1',
+      'paramsSize' => 1,
+      'annos' => NULL,
+    ),
+    '{id}' => 
     array (
       'class' => 'User',
       'method' => 'get',
       'paramsSize' => 1,
       'annos' => NULL,
     ),
-    'default/{id}/name' => 
+    '{id}/name' => 
     array (
       'class' => 'User',
       'method' => 'getName',
@@ -28,7 +41,7 @@ return array (
   ),
   'POST' => 
   array (
-    'default/create' => 
+    'create' => 
     array (
       'class' => 'User',
       'method' => 'create',

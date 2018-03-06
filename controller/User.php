@@ -1,10 +1,10 @@
 <?php
 
 use \QKPHP\Common\Config\Config;
+use \QKPHP\Web\Application;
 
 /**
  * @RequestMapping('/user')
- * @SubRequestMapping('/default')
  */
 class User extends Base {
 
@@ -17,8 +17,10 @@ class User extends Base {
    *  @method('GET')
    */
   public function get($uid) {
+    echo '<pre>';
     echo "User.get($uid): \n";
     $this->weixinService::hello();
+    var_dump(Application::getInstance());
     var_dump($this->request);
   }
 
