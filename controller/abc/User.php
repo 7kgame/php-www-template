@@ -3,7 +3,7 @@
 use \QKPHP\Common\Config\Config;
 
 /**
- * @RequestMapping('/user')
+ * @RequestMapping('user')
  * @SubRequestMapping('/sub')
  */
 class User extends Base {

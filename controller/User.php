@@ -4,7 +4,7 @@ use \QKPHP\Common\Config\Config;
 use \QKPHP\Web\Application;
 
 /**
- * @RequestMapping('/user')
+ * @RequestMapping('user')
  */
 class User extends Base {
 
