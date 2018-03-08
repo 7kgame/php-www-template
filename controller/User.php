@@ -19,8 +19,7 @@ class User extends Base {
   public function get($uid) {
     echo '<pre>';
     echo "User.get($uid): \n";
-    $this->weixinService::hello();
-    var_dump(Application::getInstance());
+    $this->weixinService->hello();
     var_dump($this->request);
   }
 
@@ -30,7 +29,7 @@ class User extends Base {
    */
   public function getName($uid) {
     echo "User.getName($uid): \n";
-    $this->weixinService::hello();
+    $this->weixinService->hello();
     var_dump($this->router);
 
     echo "\n";
