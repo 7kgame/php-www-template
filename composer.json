@@ -1,8 +1,8 @@
 {
   "require": {
-    "7k7k/php-common": "dev-master",
-    "7k7k/php-web": "dev-master",
-    "7k7k/php-weixin": "dev-master"
+    "7kgame/php-common": "dev-master",
+    "7kgame/php-web": "dev-master",
+    "7kgame/php-weixin": "dev-master"
   },
   "config": {
     "secure-http": false,
